@@ -12,8 +12,6 @@ A full-fledged Salesforce-powered CRM platform for HireSmart Solutions, a recrui
 - **Applicant Pool Management**: Java collections and generics for managing candidate pools by job
 - **Exception Handling**: Robust error handling and file I/O for resume upload simulation
 
-### ERD (Entity Relationship Diagram)
-![ERD](https://via.placeholder.com/800x600?text=HireSmart+ERD)
 
 ### Database Schema
 The project includes a normalized database schema with the following entities:
