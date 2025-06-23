@@ -3,9 +3,9 @@ package com.hiresmart.model;
 import java.sql.Date;
 
 /**
- * Application model class representing a job application in the system
+ * Application model class, mapping a candidate to a job
  */
-public class Application {
+public class Application implements Entity {
     private int applicationId;
     private int candidateId;
     private int jobId;

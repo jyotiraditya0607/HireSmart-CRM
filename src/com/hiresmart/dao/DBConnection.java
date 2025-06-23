@@ -10,9 +10,9 @@ import java.sql.SQLException;
 public class DBConnection {
 
     // Oracle database connection parameters
-    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    private static final String DB_USERNAME = "your_username";  // Replace with your Oracle username
-    private static final String DB_PASSWORD = "your_password";  // Replace with your Oracle password
+    private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
+    private static final String DB_USERNAME = "system";  // Replace with your Oracle username
+    private static final String DB_PASSWORD = "Dilu1234";  // Replace with your Oracle password
 
     private static Connection connection = null;
 

@@ -3,9 +3,9 @@ package com.hiresmart.model;
 import java.sql.Date;
 
 /**
- * Job model class representing a job posting in the system
+ * Job model class, representing a job posting
  */
-public class Job {
+public class Job implements Entity {
     private int jobId;
     private int recruiterId;
     private String title;

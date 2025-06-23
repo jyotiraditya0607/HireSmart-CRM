@@ -3,9 +3,9 @@ package com.hiresmart.model;
 import java.sql.Date;
 
 /**
- * Interview model class representing an interview in the system
+ * Interview model class, representing a scheduled interview
  */
-public class Interview {
+public class Interview implements Entity {
     private int interviewId;
     private int candidateId;
     private int jobId;

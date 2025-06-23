@@ -5,11 +5,8 @@ import java.sql.Date;
 /**
  * Candidate model class representing a job candidate in the system
  */
-public class Candidate {
+public class Candidate extends Person implements Entity {
     private int candidateId;
-    private String name;
-    private String email;
-    private String phone;
     private String skills;
     private int experienceYears;
     private String resumeFilePath;
@@ -17,15 +14,15 @@ public class Candidate {
     private Date createdDate;
 
     // Default constructor
-    public Candidate() {}
+    public Candidate() {
+        super();
+    }
 
     // Constructor with all fields
     public Candidate(int candidateId, String name, String email, String phone, String skills,
                      int experienceYears, String resumeFilePath, String status, Date createdDate) {
+        super(name, email, phone);
         this.candidateId = candidateId;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
         this.skills = skills;
         this.experienceYears = experienceYears;
         this.resumeFilePath = resumeFilePath;
@@ -36,9 +33,7 @@ public class Candidate {
     // Constructor without ID and date (for new candidate creation)
     public Candidate(String name, String email, String phone, String skills,
                      int experienceYears, String resumeFilePath, String status) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+        super(name, email, phone);
         this.skills = skills;
         this.experienceYears = experienceYears;
         this.resumeFilePath = resumeFilePath;
@@ -52,30 +47,6 @@ public class Candidate {
 
     public void setCandidateId(int candidateId) {
         this.candidateId = candidateId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getSkills() {

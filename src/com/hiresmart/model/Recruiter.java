@@ -3,33 +3,28 @@ package com.hiresmart.model;
 /**
  * Recruiter model class representing a recruiter in the system
  */
-public class Recruiter {
+public class Recruiter extends Person implements Entity {
     private int recruiterId;
-    private String name;
-    private String email;
     private String expertise;
-    private String phone;
     private String activeStatus;
 
     // Default constructor
-    public Recruiter() {}
+    public Recruiter() {
+        super();
+    }
 
     // Constructor with all fields
-    public Recruiter(int recruiterId, String name, String email, String expertise, String phone, String activeStatus) {
+    public Recruiter(int recruiterId, String name, String email, String phone, String expertise, String activeStatus) {
+        super(name, email, phone);
         this.recruiterId = recruiterId;
-        this.name = name;
-        this.email = email;
         this.expertise = expertise;
-        this.phone = phone;
         this.activeStatus = activeStatus;
     }
 
     // Constructor without ID (for new recruiter creation)
-    public Recruiter(String name, String email, String expertise, String phone, String activeStatus) {
-        this.name = name;
-        this.email = email;
+    public Recruiter(String name, String email, String phone, String expertise, String activeStatus) {
+        super(name, email, phone);
         this.expertise = expertise;
-        this.phone = phone;
         this.activeStatus = activeStatus;
     }
 
@@ -42,36 +37,12 @@ public class Recruiter {
         this.recruiterId = recruiterId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getExpertise() {
         return expertise;
     }
 
     public void setExpertise(String expertise) {
         this.expertise = expertise;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getActiveStatus() {
@@ -88,8 +59,8 @@ public class Recruiter {
                 "recruiterId=" + recruiterId +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", expertise='" + expertise + '\'' +
                 ", phone='" + phone + '\'' +
+                ", expertise='" + expertise + '\'' +
                 ", activeStatus='" + activeStatus + '\'' +
                 '}';
     }
